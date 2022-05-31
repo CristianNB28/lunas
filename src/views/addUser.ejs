@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>4 Lunas</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="/css/demo.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar" data-image="/img/sidebar-5.jpg">
+            <div class="sidebar-wrapper">
+                <div class="logo">
+                    <a href="#" class="simple-text">
+                        4 lunas
+                    </a>
+                </div>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">
+                            <i class="nc-icon nc-chart-pie-35"></i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/users">
+                            <i class="nc-icon nc-single-02"></i>
+                            <p>CRUD Users</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/banners">
+                            <i class="nc-icon nc-album-2"></i>
+                            <p>CRUD Banners</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/annotations-users">
+                            <i class="nc-icon nc-single-copy-04"></i>
+                            <p>Report</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"> Dashboard </a>
+                    <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout-admin">
+                                    <span class="no-icon">Log out</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form method="POST" action="/add-user">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="form-group row"><label class="col-sm-2 col-form-label">Name</label>
+                                                    <div class="col-sm-10">
+                                                        <input 
+                                                            type="text"
+                                                            name="nombre_encuestada"
+                                                            id="nombre_encuestada"
+                                                            placeholder="Name *" 
+                                                            class="form-control"
+                                                            required
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row"><label class="col-sm-2 col-form-label">Period start date</label>
+                                                    <div class="col-sm-10">
+                                                        <input 
+                                                            type="date"
+                                                            name="fecha_ciclo"
+                                                            id="fecha_ciclo" 
+                                                            class="form-control"
+                                                            required
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12 separate-card">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <div class="form-group row"><label class="col-sm-4 col-form-label">Email</label>
+                                                    <div class="col-sm-8">
+                                                        <input 
+                                                            type="text"
+                                                            name="correo_usuario"
+                                                            id="correo_usuario"
+                                                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                                                            placeholder="Email *"
+                                                            class="form-control" 
+                                                            required
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row"><label class="col-sm-4 col-form-label">How old are you?</label>
+                                                    <div class="col-sm-8">
+                                                        <select class="form-control" name="edad_encuestada" id="edad_encuestada" required>
+                                                            <option value="">Please select *</option>
+                                                            <option value="Under 18 years old">Under 18 years old</option>
+                                                            <option value="18 to 24 years old">18 to 24 years old</option>
+                                                            <option value="25 to 34 years old">25 to 34 years old</option>
+                                                            <option value="35 to 44 years old">35 to 44 years old</option>
+                                                            <option value="45 to 54 years old">45 to 54 years old</option>
+                                                            <option value="Over 54 years old">Over 54 years old</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row"><label class="col-sm-4 col-form-label">What is your school level?</label>
+                                                    <div class="col-sm-8">
+                                                        <select class="form-control" name="nivel_escolar_encuestada" id="nivel_escolar_encuestada" required>
+                                                            <option value="">Please select *</option>
+                                                            <option value="Preparatory">Preparatory</option>
+                                                            <option value="Bachelor's Degree">Bachelor's Degree</option>
+                                                            <option value="Master's Degree">Master's Degree</option>
+                                                            <option value="Doctorate">Doctorate</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-12">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <div class="form-group row"><label class="col-sm-4 col-form-label">Password</label>
+                                                    <div class="col-sm-8">
+                                                        <input 
+                                                            type="password"
+                                                            name="password_usuario"
+                                                            id="password_usuario"
+                                                            placeholder="Password *" 
+                                                            class="form-control" 
+                                                            required
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row"><label class="col-sm-4 col-form-label">What is your current employment situation?</label>
+                                                    <div class="col-sm-8">
+                                                        <select class="form-control" name="situacion_laboral_encuestada" id="situacion_laboral_encuestada" required>
+                                                            <option value="">Please select *</option>
+                                                            <option value="Part time employment">Part time employment</option>
+                                                            <option value="Full time employment">Full time employment</option>
+                                                            <option value="Unemployed">Unemployed</option>
+                                                            <option value="Self-employed">Self-employed</option>
+                                                            <option value="Student">Student</option>
+                                                            <option value="Retired">Retired</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group row"><label class="col-sm-4 col-form-label">Which of these options would best describe you?</label>
+                                                    <div class="col-sm-8">
+                                                        <select class="form-control" name="descripcion_encuestada" id="descripcion_encuestada" required>
+                                                            <option value="">Please select *</option>
+                                                            <option value="Afro-American">Afro-American</option>
+                                                            <option value="Asian">Asian</option>
+                                                            <option value="Latin">Latin</option>
+                                                            <option value="American">American</option>
+                                                            <option value="Others">Others</option>
+                                                        </select>
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-4 col-sm-offset-2">
+                                        
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-4 col-sm-offset-2">
+                                        <a href="/users" class="btn btn-white btn-sm">Cancel</a>
+                                        <button class="btn btn-primary btn-sm" type="submit">Save</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav>
+                        <p class="copyright text-center">
+                            ©
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                        </p>
+                    </nav>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+<!--   Core JS Files   -->
+<script src="/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="/js/core/popper.min.js" type="text/javascript"></script>
+<script src="/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="/js/plugins/bootstrap-switch.js"></script>
+<!--  Chartist Plugin  -->
+<script src="/js/plugins/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="/js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
+<script src="/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+<script src="/js/demo.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<% if(typeof alert != 'undefined') { %>
+    <script>
+        Swal.fire({
+            title: '<%= alertTitle %>',
+            text: '<%= alertMessage %>',
+            icon: '<%= alertIcon %>',
+            showConfirmButton: <%= showConfirmButton %>,
+            timer: <%= timer %>
+        }).then(()=>{
+            window.location='/<%= ruta %>'
+        })
+    </script>
+<% } %>
+
+</html>
